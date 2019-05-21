@@ -1,0 +1,23 @@
+<hibernate-configuration>
+    <session-factory><!-- Database connection settings -->
+        <property name="connection.driver_class">org.postgresql.Driver</property>
+        <property name="connection.url">jdbc:postgresql://chamilo.rene-descartes.fr:5432/ccvenjavagroupea2</property>
+        <property name="connection.username">groupea2</property>
+        <property name="connection.password">grpa2</property><!-- SQL dialect -->
+        <property name="hibernate.dialect">org.hibernate.dialect.PostgreSQLDialect</property><!-- Echo all executed SQL to stdout -->
+        <property name="show_sql">true</property><!--
+ Drop and re-create the database schema on startup 
+-->
+
+
+   
+            
+        <property name="hbm2ddl.auto">create</property><!--
+ Lors de l'utilisation des annotations @ManyToOne et OneToMany, l'ordre a son importance 
+-->
+        <mapping class="fr.descartes.cvvensample.dao.Evenement"/>
+        <mapping class="fr.descartes.cvvensample.dao.Participant"/>
+        
+
+    </session-factory>
+</hibernate-configuration>
